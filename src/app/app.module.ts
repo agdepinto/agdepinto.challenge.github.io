@@ -13,6 +13,7 @@ import {
  } from "igniteui-angular";
  import { FormsModule, ReactiveFormsModule } from '@angular/forms';
  import { ModalModule } from 'ngx-bootstrap/modal';
+ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { Option1Component } from './option1/option1.component';
 import { Option2Component } from './option2/option2.component';
 import { Option3Component } from './option3/option3.component';
@@ -37,6 +38,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from'ngx-mask';
     IgxGridModule,
     IgxButtonGroupModule,
     ModalModule.forRoot(),
+    CollapseModule,
     NgxMaskDirective, 
     NgxMaskPipe
   ],

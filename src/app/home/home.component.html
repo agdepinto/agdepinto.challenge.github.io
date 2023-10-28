@@ -10,10 +10,10 @@
     <nav class="navbar navbar-expand-lg border-bottom border-body text-light">
         <div class="container-fluid">
           <a class="navbar-brand text-light" routerLink="/">Challenge</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" (click)="updateIsCollapsed()" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse text-light" [collapse]="isCollapsed">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link text-light" routerLink="/form">Formulario</a>
@@ -29,6 +29,20 @@
         </div>
       </nav>
       <router-outlet></router-outlet>
-      
+      <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card text-center w-75 m-4" *ngIf="router.url==='/'">
+          <div class="card-header">
+            Nuevo reto
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Bienvenido</h5>
+            <p class="card-text">Este reto tiene todo lo que se ha solicitado en el ejercicio enviado el viernes 27-10-2023</p>
+            <h4>Muchas gracias por la oportunidad</h4>
+          </div>
+        </div>
+      </div>
     </body>
+    <footer class="bg-primary text-light text-center py-3">
+      <p>&copy; 2023 Challenge. Todos los derechos reservados.</p>
+    </footer>
 </html>
